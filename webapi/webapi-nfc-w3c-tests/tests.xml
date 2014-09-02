@@ -26,6 +26,11 @@
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NDEFMessage_getBytes.html</test_script_entry>
         </description>
       </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NDEFMessage_getBytes_func" purpose="Check if NDEFMessage::getBytes works well and with result byte []">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NDEFMessage_getBytes_func.html</test_script_entry>
+        </description>
+      </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NDEFMessage_records_attribute" purpose="Check if attribute records of NDEFMessage exists, has type Array and is readonly">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NDEFMessage_records_attribute.html</test_script_entry>
@@ -54,6 +59,11 @@
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NDEFRecord_getPayload" purpose="Check if method NDEFRecord::getPayload() exists">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NDEFRecord_getPayload.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NDEFRecord_getPayload_func" purpose="Check if NDEFRecord::getPayload works well and with result byte []">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NDEFRecord_getPayload_func.html</test_script_entry>
         </description>
       </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NDEFRecord_id_attribute" purpose="Check if NDEFRecord have id attribute with proper id and is readonly">
@@ -191,9 +201,19 @@
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpeerfound_attribute.html</test_script_entry>
         </description>
       </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCManager_onpeerfound_handler" purpose="Check if onpeerfound event handler can be fired by peerfound event">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpeerfound_handler.html</test_script_entry>
+        </description>
+      </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_onpeerlost_attribute" purpose="Check if NFCManager have onpeerlost attribute with proper type">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpeerlost_attribute.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCManager_onpeerlost_handler" purpose="Check if onpeerlost event handler can be fired by peerlost event">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpeerlost_handler.html</test_script_entry>
         </description>
       </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_onpollstart_attribute" purpose="Check if NFCManager have onpollstart attribute with proper type">
@@ -201,9 +221,19 @@
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpollstart_attribute.html</test_script_entry>
         </description>
       </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_onpollstart_handler" purpose="Check if onpollstart event handler can be fired by pollstart event">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpollstart_handler.html</test_script_entry>
+        </description>
+      </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_onpollstop_attribute" purpose="Check if NFCManager have onpollstop attribute with proper type">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpollstop_attribute.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_onpollstop_handler" purpose="Check if onpollstop event handler can be fired by pollstop event">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpollstop_handler.html</test_script_entry>
         </description>
       </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_onpoweroff_attribute" purpose="Check if NFCManager have onpoweroff attribute with proper type">
@@ -211,9 +241,19 @@
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpoweroff_attribute.html</test_script_entry>
         </description>
       </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_onpoweroff_handler" purpose="Check if onpoweroff event handler can be fired by poweroff event" onload_delay="10">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpoweroff_handler.html</test_script_entry>
+        </description>
+      </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_onpoweron_attribute" purpose="Check if NFCManager have onpoweron attribute with proper type">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpoweron_attribute.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_onpoweron_handler" purpose="Check if onpoweron event handler can be fired by poweron event" onload_delay="10">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpoweron_handler.html</test_script_entry>
         </description>
       </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_ontagfound_attribute" purpose="Check if NFCManager have ontagfound attribute with proper type">
@@ -221,9 +261,19 @@
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_ontagfound_attribute.html</test_script_entry>
         </description>
       </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCManager_ontagfound_handler" purpose="Check if ontagfound event handler can be fired by tagfound event">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_ontagfound_handler.html</test_script_entry>
+        </description>
+      </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_ontaglost_attribute" purpose="Check if NFCManager have ontaglost attribute with proper type">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_ontaglost_attribute.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCManager_ontaglost_handler" purpose="Check if ontaglost event handler can be fired by taglost event">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_ontaglost_handler.html</test_script_entry>
         </description>
       </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_polling_attribute" purpose="Check if NFCManager have polling attribute with proper type">
@@ -241,9 +291,19 @@
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_powerOff.html</test_script_entry>
         </description>
       </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_powerOff_func" purpose="Check if method NFCManager::powerOff sets a value of attribute NFCManager::powered to false" onload_delay="10">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_powerOff_func.html</test_script_entry>
+        </description>
+      </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_powerOn" purpose="Check if method NFCManager::powerOn() exists">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_powerOn.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_powerOn_func" purpose="Check if method NFCManager::powerOn sets a value of attribute NFCManager::powered to true" onload_delay="10">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_powerOn_func.html</test_script_entry>
         </description>
       </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_startPoll" purpose="Check if method NFCManager::startPoll() exists">
@@ -251,9 +311,74 @@
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_startPoll.html</test_script_entry>
         </description>
       </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_startPoll_func" purpose="Check if method NFCManager::startPoll sets a value of attribute NFCManager::polling to true">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_startPoll_func.html</test_script_entry>
+        </description>
+      </testcase>
       <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_stopPoll" purpose="Check if method NFCManager::stopPoll() exists">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_stopPoll.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="auto" id="NFCManager_stopPoll_func" purpose="Check if method NFCManager::stopPoll sets a value of attribute NFCManager::polling to false">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_stopPoll_func.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCPeerEvent_peer_attribute" purpose="Check if NFCPeerEvent have peer attribute with proper type and is readonly">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeerEvent_peer_attribute.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCPeer_onmessageread_attribute" purpose="Check if NFCPeer have onmessageread attribute with proper type">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_onmessageread_attribute.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCPeer_sendNDEF" purpose="Check if NFCPeer::sendNDEF() exists">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_sendNDEF.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCPeer_sendNDEF_func" purpose="Check if NFCPeer::sendNDEF works well and can send NDEFMessage to the peer device">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_sendNDEF_func.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCPeer_startHandover" purpose="Check if NFCPeer::startHandover() exists">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_startHandover.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCPeer_startHandover_func" purpose="Check if NFCPeer::startHandover works well and can initiate bluetooth pairing">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_startHandover_func.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCTagEvent_tag_attribute" purpose="Check if NFCTagEvent have tag attribute with proper type and is readonly">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTagEvent_tag_attribute.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCTag_readNDEF" purpose="Check if NFCTag::readNDEF() exists">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTag_readNDEF.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCTag_readNDEF_func" purpose="Check if NFCTag::readNDEF works well and can read NDEFRecord from the nfc tag">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTag_readNDEF_func.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCTag_writeNDEF" purpose="Check if NFCTag::writeNDEF() exists">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTag_writeNDEF.html</test_script_entry>
+        </description>
+      </testcase>
+      <testcase component="WebAPI/Communication/NFC" execution_type="manual" id="NFCTag_writeNDEF_func" purpose="Check if NFCTag::writeNDEF works well and can write NDEFMessage to nfc tag">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTag_writeNDEF_func.html</test_script_entry>
         </description>
       </testcase>
     </set>

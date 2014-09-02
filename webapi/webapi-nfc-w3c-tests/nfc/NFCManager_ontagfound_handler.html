@@ -32,7 +32,7 @@ Authors:
 <html>
 <head>
 <meta charset="utf-8">
-<title>[NFC Test]:NFCTagEvent_tag_attribute</title>
+<title>[NFC Test]:NFCManager_ontagfound_handler</title>
 <link rel="author" title="Intel" href="http://www.intel.com">
 <link rel="help" href="http://www.w3.org/TR/nfc/">
 <script type="text/javascript" src="support/unitcommon.js"></script>
@@ -43,37 +43,32 @@ Authors:
 <p>Tap NFC tag to the NFC adapter.</p>
 <div id="log"></div>
 <script>
-//==== TEST: NFCTagEvent_tag_attribute
+//==== TEST: NFCManager_ontagfound_handler
 //==== PRIORITY P1
-//==== LABEL Check if NFCTagEvent have tag attribute with proper type and is readonly
+//==== LABEL Check if ontagfound event handler can be fired by tagfound event
 //==== SPEC_URL http://www.w3.org/TR/nfc/
-setup({timeout: 60000});
+setup({timeout: 30000});
 
 var onError, onSuccess;
 
 async_test(function (t) {
-    
     onError = t.step_func(function (error) {
         assert_unreached("startPoll() error callback was invoked: " + error.name + " msg: " + error.message);
         t.done();
     });
 
-    onSuccess = function () { 
-       //After NFC manager start polling, then NFC tag can be detected.
+    onSuccess = function () {
+       //After NFC manager start polling, then nfc tag can be detected.
     }
 
-    function tagFound (e) {
-        t.step(function () {
-            assert_true("tag" in e, "tag attribute exists");
-            assert_equals(typeof e.tag, "object", "tag attribute of type");
-            check_readonly(e, "tag", e.tag, "object", "null");
-        });
+    navigator.nfc.ontagfound = t.step_func(function (e) {
+        assert_true("tag" in e, "tag attribute exists");
         t.done();
-    }
+    });
 
-    navigator.nfc.addEventListener('tagfound', tagFound);
-    navigator.nfc.startPoll().then(onSuccess, onError);
-}, document.title, {timeout: 60000});
+    navigator.nfc.startPoll().then(onSuccess, onError);    
+}, document.title, {timeout: 30000});
 </script>
+
 </body>
 </html>

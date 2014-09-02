@@ -40,7 +40,7 @@ Authors:
 </head>
 <body>
 <p>Test step:</p>
-<p>Tap other NFC enabled device to the NFC Manager.</p>
+<p>Tap other NFC enabled device to the NFC adapter.</p>
 <div id="log"></div>
 <script>
 //==== TEST: NFCPeer_sendNDEF
@@ -48,6 +48,8 @@ Authors:
 //==== LABEL Check if NFCPeer::sendNDEF() exists
 //==== SPEC_URL http://www.w3.org/TR/nfc/
 setup({timeout: 60000});
+
+var onError, onSuccess;
 
 async_test(function (t) {
     onError = t.step_func(function (error) {

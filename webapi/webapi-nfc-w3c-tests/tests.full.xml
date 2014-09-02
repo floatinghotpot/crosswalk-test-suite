@@ -66,6 +66,18 @@
           </spec>
         </specs>
       </testcase>
+      <testcase purpose="Check if NDEFMessage::getBytes works well and with result byte []" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="p1" id="NDEFMessage_getBytes_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NDEFMessage_getBytes_func.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NDEFMessage" element_type="method" element_name="getBytes" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
       <testcase purpose="Check if attribute records of NDEFMessage exists, has type Array and is readonly" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NDEFMessage_records_attribute">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NDEFMessage_records_attribute.html</test_script_entry>
@@ -129,6 +141,18 @@
       <testcase purpose="Check if method NDEFRecord::getPayload() exists" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NDEFRecord_getPayload">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NDEFRecord_getPayload.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NDEFRecord" element_type="method" element_name="getPayload" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if NDEFRecord::getPayload works well and with result byte []" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NDEFRecord_getPayload_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NDEFRecord_getPayload_func.html</test_script_entry>
         </description>
         <specs>
           <spec>
@@ -462,9 +486,33 @@
           </spec>
         </specs>
       </testcase>
+      <testcase purpose="Check if onpeerfound event handler can be fired by peerfound event" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCManager_onpeerfound_handler">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpeerfound_handler.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="attribute" element_name="onpeerfound" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
       <testcase purpose="Check if NFCManager have onpeerlost attribute with proper type" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_onpeerlost_attribute">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpeerlost_attribute.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="attribute" element_name="onpeerlost" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if onpeerlost event handler can be fired by peerlost event" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCManager_onpeerlost_handler">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpeerlost_handler.html</test_script_entry>
         </description>
         <specs>
           <spec>
@@ -486,9 +534,33 @@
           </spec>
         </specs>
       </testcase>
+      <testcase purpose="Check if onpollstart event handler can be fired by pollstart event" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_onpollstart_handler">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpollstart_handler.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="attribute" element_name="onpollstart" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
       <testcase purpose="Check if NFCManager have onpollstop attribute with proper type" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_onpollstop_attribute">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpollstop_attribute.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="attribute" element_name="onpollstop" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if onpollstop event handler can be fired by pollstop event" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_onpollstop_handler">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpollstop_handler.html</test_script_entry>
         </description>
         <specs>
           <spec>
@@ -510,9 +582,33 @@
           </spec>
         </specs>
       </testcase>
+      <testcase purpose="Check if onpoweroff event handler can be fired by poweroff event" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_onpoweroff_handler">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpoweroff_handler.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="attribute" element_name="onpoweroff" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
       <testcase purpose="Check if NFCManager have onpoweron attribute with proper type" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_onpoweron_attribute">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpoweron_attribute.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="attribute" element_name="onpoweron" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if onpoweron event handler can be fired by poweron event" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_onpoweron_handler">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_onpoweron_handler.html</test_script_entry>
         </description>
         <specs>
           <spec>
@@ -534,9 +630,33 @@
           </spec>
         </specs>
       </testcase>
+      <testcase purpose="Check if ontagfound event handler can be fired by tagfound event" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCManager_ontagfound_handler">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_ontagfound_handler.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="attribute" element_name="ontagfound" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
       <testcase purpose="Check if NFCManager have ontaglost attribute with proper type" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_ontaglost_attribute">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_ontaglost_attribute.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="attribute" element_name="ontaglost" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if ontaglost event handler can be fired by taglost event" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCManager_ontaglost_handler">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_ontaglost_handler.html</test_script_entry>
         </description>
         <specs>
           <spec>
@@ -582,9 +702,33 @@
           </spec>
         </specs>
       </testcase>
+      <testcase purpose="Check if method NFCManager::powerOff sets a value of attribute NFCManager::powered to false" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_powerOff_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_powerOff_func.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="method" element_name="powerOff" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
       <testcase purpose="Check if method NFCManager::powerOn() exists" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_powerOn">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_powerOn.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="method" element_name="powerOn" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if method NFCManager::powerOn sets a value of attribute NFCManager::powered to true" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_powerOn_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_powerOn_func.html</test_script_entry>
         </description>
         <specs>
           <spec>
@@ -606,6 +750,18 @@
           </spec>
         </specs>
       </testcase>
+      <testcase purpose="Check if method NFCManager::startPoll sets a value of attribute NFCManager::polling to true" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_startPoll_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_startPoll_func.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="method" element_name="startPoll" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
       <testcase purpose="Check if method NFCManager::stopPoll() exists" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_stopPoll">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_stopPoll.html</test_script_entry>
@@ -618,7 +774,19 @@
           </spec>
         </specs>
       </testcase>
-      <testcase purpose="Check if NFCPeerEvent have peer attribute with proper type and is readonly" type="compliance" status="designed" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeerEvent_peer_attribute">
+      <testcase purpose="Check if method NFCManager::stopPoll sets a value of attribute NFCManager::polling to false" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="auto" priority="P1" id="NFCManager_stopPoll_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCManager_stopPoll_func.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCManager" element_type="method" element_name="stopPoll" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if NFCPeerEvent have peer attribute with proper type and is readonly" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeerEvent_peer_attribute">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeerEvent_peer_attribute.html</test_script_entry>
         </description>
@@ -630,7 +798,7 @@
           </spec>
         </specs>
       </testcase>
-      <testcase purpose="Check if NFCPeer have onmessageread attribute with proper type" type="compliance" status="designed" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeer_onmessageread_attribute">
+      <testcase purpose="Check if NFCPeer have onmessageread attribute with proper type" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeer_onmessageread_attribute">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_onmessageread_attribute.html</test_script_entry>
         </description>
@@ -642,7 +810,7 @@
           </spec>
         </specs>
       </testcase>
-      <testcase purpose="Check if NFCPeer::sendNDEF() exists" type="compliance" status="designed" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeer_sendNDEF">
+      <testcase purpose="Check if NFCPeer::sendNDEF() exists" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeer_sendNDEF">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_sendNDEF.html</test_script_entry>
         </description>
@@ -654,7 +822,19 @@
           </spec>
         </specs>
       </testcase>
-      <testcase purpose="Check if NFCPeer::startHandover() exists" type="compliance" status="designed" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeer_startHandover">
+      <testcase purpose="Check if NFCPeer::sendNDEF works well and can send NDEFMessage to the peer device" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeer_sendNDEF_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_sendNDEF_func.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCPeer" element_type="method" element_name="sendNDEF" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if NFCPeer::startHandover() exists" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeer_startHandover">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_startHandover.html</test_script_entry>
         </description>
@@ -666,7 +846,19 @@
           </spec>
         </specs>
       </testcase>
-      <testcase purpose="Check if NFCTagEvent have tag attribute with proper type and is readonly" type="compliance" status="designed" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCTagEvent_tag_attribute">
+      <testcase purpose="Check if NFCPeer::startHandover works well and can initiate bluetooth pairing" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCPeer_startHandover_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCPeer_startHandover_func.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCPeer" element_type="method" element_name="startHandover" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if NFCTagEvent have tag attribute with proper type and is readonly" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCTagEvent_tag_attribute">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTagEvent_tag_attribute.html</test_script_entry>
         </description>
@@ -678,7 +870,7 @@
           </spec>
         </specs>
       </testcase>
-      <testcase purpose="Check if NFCTag::readNDEF() exists" type="compliance" status="designed" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCTag_readNDEF">
+      <testcase purpose="Check if NFCTag::readNDEF() exists" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCTag_readNDEF">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTag_readNDEF.html</test_script_entry>
         </description>
@@ -690,9 +882,33 @@
           </spec>
         </specs>
       </testcase>
-      <testcase purpose="Check if NFCTag::writeNDEF() exists" type="compliance" status="designed" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCTag_writeNDEF">
+      <testcase purpose="Check if NFCTag::readNDEF works well and can read NDEFRecord from the nfc tag" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCTag_readNDEF_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTag_readNDEF_func.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCTag" element_type="method" element_name="readNDEF" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if NFCTag::writeNDEF() exists" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCTag_writeNDEF">
         <description>
           <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTag_writeNDEF.html</test_script_entry>
+        </description>
+        <specs>
+          <spec>
+            <spec_assertion interface="NFCTag" element_type="method" element_name="writeNDEF" specification="NFC" section="Communication" category="W3C API Specifications"/>
+            <spec_url>http://www.w3.org/TR/nfc/</spec_url>
+            <spec_statement>TBD</spec_statement>
+          </spec>
+        </specs>
+      </testcase>
+      <testcase purpose="Check if NFCTag::writeNDEF works well and can write NDEFMessage to nfc tag" type="compliance" status="approved" component="WebAPI/Communication/NFC" execution_type="manual" priority="P1" id="NFCTag_writeNDEF_func">
+        <description>
+          <test_script_entry>/opt/webapi-nfc-w3c-tests/nfc/NFCTag_writeNDEF_func.html</test_script_entry>
         </description>
         <specs>
           <spec>

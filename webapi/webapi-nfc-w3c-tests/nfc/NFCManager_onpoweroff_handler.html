@@ -32,48 +32,47 @@ Authors:
 <html>
 <head>
 <meta charset="utf-8">
-<title>[NFC Test]:NFCTagEvent_tag_attribute</title>
+<title>[NFC Test]:NFCManager_onpoweroff_handler</title>
 <link rel="author" title="Intel" href="http://www.intel.com">
 <link rel="help" href="http://www.w3.org/TR/nfc/">
 <script type="text/javascript" src="support/unitcommon.js"></script>
 <script type="text/javascript" src="support/nfc_common.js"></script>
 </head>
 <body>
-<p>Test step:</p>
-<p>Tap NFC tag to the NFC adapter.</p>
 <div id="log"></div>
 <script>
-//==== TEST: NFCTagEvent_tag_attribute
+//==== TEST: NFCManager_onpoweroff_handler
 //==== PRIORITY P1
-//==== LABEL Check if NFCTagEvent have tag attribute with proper type and is readonly
+//==== LABEL Check if onpoweroff event handler can be fired by poweroff event
 //==== SPEC_URL http://www.w3.org/TR/nfc/
-setup({timeout: 60000});
+setup({timeout: 10000});
 
-var onError, onSuccess;
+var t = async_test(document.title, {timeout: 8000}), onSuccess, onError;
 
-async_test(function (t) {
-    
+if(!navigator.nfc.powered) {
+    navigator.nfc.powerOn();
+}
+
+t.step(function () {
     onError = t.step_func(function (error) {
-        assert_unreached("startPoll() error callback was invoked: " + error.name + " msg: " + error.message);
+        assert_unreached("powerOff() error callback was invoked: " + error.name + " msg: " + error.message);
         t.done();
     });
 
-    onSuccess = function () { 
-       //After NFC manager start polling, then NFC tag can be detected.
+    onSuccess = function () {
+       //fire poweroff event successed
     }
 
-    function tagFound (e) {
-        t.step(function () {
-            assert_true("tag" in e, "tag attribute exists");
-            assert_equals(typeof e.tag, "object", "tag attribute of type");
-            check_readonly(e, "tag", e.tag, "object", "null");
-        });
+    navigator.nfc.onpoweroff = t.step_func(function () {
+        assert_false(navigator.nfc.powered, "the powered state changes to false");
+        navigator.nfc.powerOn();
         t.done();
-    }
+    });    
+});
 
-    navigator.nfc.addEventListener('tagfound', tagFound);
-    navigator.nfc.startPoll().then(onSuccess, onError);
-}, document.title, {timeout: 60000});
+setTimeout(function(){ 
+    navigator.nfc.powerOff().then(onSuccess, onError);
+}, 3000);
 </script>
 </body>
 </html>

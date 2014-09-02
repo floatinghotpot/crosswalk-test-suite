@@ -40,7 +40,7 @@ Authors:
 </head>
 <body>
 <p>Test step:</p>
-<p>Tap NFC tag to the NFC Manager.</p>
+<p>Tap NFC tag to the NFC adapter.</p>
 <div id="log"></div>
 <script>
 //==== TEST: NFCTag_writeNDEF
@@ -48,6 +48,8 @@ Authors:
 //==== LABEL Check if NFCTag::writeNDEF() exists
 //==== SPEC_URL http://www.w3.org/TR/nfc/
 setup({timeout: 60000});
+
+var onError, onSuccess;
 
 async_test(function (t) {
     onError = t.step_func(function (error) {

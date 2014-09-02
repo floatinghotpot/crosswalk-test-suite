@@ -32,7 +32,7 @@ Authors:
 <html>
 <head>
 <meta charset="utf-8">
-<title>[NFC Test]:NFCTagEvent_tag_attribute</title>
+<title>[NFC Test]:NFCTag_writeNDEF_func</title>
 <link rel="author" title="Intel" href="http://www.intel.com">
 <link rel="help" href="http://www.w3.org/TR/nfc/">
 <script type="text/javascript" src="support/unitcommon.js"></script>
@@ -43,13 +43,13 @@ Authors:
 <p>Tap NFC tag to the NFC adapter.</p>
 <div id="log"></div>
 <script>
-//==== TEST: NFCTagEvent_tag_attribute
+//==== TEST: NFCTag_writeNDEF_func
 //==== PRIORITY P1
-//==== LABEL Check if NFCTagEvent have tag attribute with proper type and is readonly
+//==== LABEL Check if NFCTag::writeNDEF works well and can write NDEFMessage to nfc tag
 //==== SPEC_URL http://www.w3.org/TR/nfc/
-setup({timeout: 60000});
 
-var onError, onSuccess;
+setup({timeout: 60000});
+var onError, writeError, onSuccess, writeSuccess;
 
 async_test(function (t) {
     
@@ -62,14 +62,21 @@ async_test(function (t) {
        //After NFC manager start polling, then NFC tag can be detected.
     }
 
-    function tagFound (e) {
-        t.step(function () {
-            assert_true("tag" in e, "tag attribute exists");
-            assert_equals(typeof e.tag, "object", "tag attribute of type");
-            check_readonly(e, "tag", e.tag, "object", "null");
-        });
+    writeError = t.step_func(function (error) {
+        assert_unreached("writeNDEF() error callback was invoked: " + error.name + " msg: " + error.message);
         t.done();
+    });
+
+    writeSuccess = t.step_func(function () {
+        t.done();
+    });
+
+    function tagFound (e) {
+        e.tag.writeNDEF(message).then(writeSuccess, writeError);
     }
+
+    var record = new NDEFRecordText("Hi!", "en-GB");
+    var message = new NDEFMessage([record]);
 
     navigator.nfc.addEventListener('tagfound', tagFound);
     navigator.nfc.startPoll().then(onSuccess, onError);
