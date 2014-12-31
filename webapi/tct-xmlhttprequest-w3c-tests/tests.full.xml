@@ -2205,7 +2205,7 @@
           </spec>
         </specs>
       </testcase>
-      <testcase component="W3C_HTML5 APIs/Communication/XMLHttpRequest Level 2" execution_type="auto" id="send-redirect-bogus1" priority="P2" purpose="XMLHttpRequest: send() - Redirects (bogus Location header) (302: http://example.not)" status="approved" type="compliance">
+      <testcase component="W3C_HTML5 APIs/Communication/XMLHttpRequest Level 2" execution_type="auto" id="send-redirect-bogus1" priority="P2" purpose="XMLHttpRequest: send() - Redirects (bogus Location header) (302: http://example.not)" status="approved" type="compliance" onload_delay="30">
         <description>
           <test_script_entry>/opt/tct-xmlhttprequest-w3c-tests/xmlhttprequest/w3c/send-redirect-bogus.htm?total_num=4&amp;amp;locator_key=id&amp;amp;value=1</test_script_entry>
         </description>
@@ -2217,7 +2217,7 @@
           </spec>
         </specs>
       </testcase>
-      <testcase component="W3C_HTML5 APIs/Communication/XMLHttpRequest Level 2" execution_type="auto" id="send-redirect-bogus2" priority="P2" purpose="XMLHttpRequest: send() - Redirects (bogus Location header) (302: mailto:someone@example.org)" status="approved" type="compliance">
+      <testcase component="W3C_HTML5 APIs/Communication/XMLHttpRequest Level 2" execution_type="auto" id="send-redirect-bogus2" priority="P2" purpose="XMLHttpRequest: send() - Redirects (bogus Location header) (302: mailto:someone@example.org)" status="approved" type="compliance" onload_delay="30">
         <description>
           <test_script_entry>/opt/tct-xmlhttprequest-w3c-tests/xmlhttprequest/w3c/send-redirect-bogus.htm?total_num=4&amp;amp;locator_key=id&amp;amp;value=2</test_script_entry>
         </description>
@@ -2229,7 +2229,7 @@
           </spec>
         </specs>
       </testcase>
-      <testcase component="W3C_HTML5 APIs/Communication/XMLHttpRequest Level 2" execution_type="auto" id="send-redirect-bogus3" priority="P2" purpose="XMLHttpRequest: send() - Redirects (bogus Location header) (303: http://example.not)" status="approved" type="compliance">
+      <testcase component="W3C_HTML5 APIs/Communication/XMLHttpRequest Level 2" execution_type="auto" id="send-redirect-bogus3" priority="P2" purpose="XMLHttpRequest: send() - Redirects (bogus Location header) (303: http://example.not)" status="approved" type="compliance" onload_delay="30">
         <description>
           <test_script_entry>/opt/tct-xmlhttprequest-w3c-tests/xmlhttprequest/w3c/send-redirect-bogus.htm?total_num=4&amp;amp;locator_key=id&amp;amp;value=3</test_script_entry>
         </description>
@@ -2241,7 +2241,7 @@
           </spec>
         </specs>
       </testcase>
-      <testcase component="W3C_HTML5 APIs/Communication/XMLHttpRequest Level 2" execution_type="auto" id="send-redirect-bogus4" priority="P2" purpose="XMLHttpRequest: send() - Redirects (bogus Location header) (303: foobar:someone@example.org)" status="approved" type="compliance">
+      <testcase component="W3C_HTML5 APIs/Communication/XMLHttpRequest Level 2" execution_type="auto" id="send-redirect-bogus4" priority="P2" purpose="XMLHttpRequest: send() - Redirects (bogus Location header) (303: foobar:someone@example.org)" status="approved" type="compliance" onload_delay="30">
         <description>
           <test_script_entry>/opt/tct-xmlhttprequest-w3c-tests/xmlhttprequest/w3c/send-redirect-bogus.htm?total_num=4&amp;amp;locator_key=id&amp;amp;value=4</test_script_entry>
         </description>
