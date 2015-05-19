@@ -293,7 +293,11 @@ The Cordova Mobile Spec test doesn't need testkit-lite etc., tools to run the te
         $ plugman install --platform android --project ./ --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git#r0.3.8
 
         $ plugman install --platform android --project ./ --plugin assets/www/cordova-plugin-whitelist
+
+        $ plugman install --platform android --project ./ --plugin https://github.com/floatinghotpot/cordova-admob-pro.git
         ```
+
+    **NOTE**: When install admob plugin, make sure the google server can be connected.
 
     * According to [Splash Screen API](http://docs.phonegap.com/en/3.0.0/cordova_splashscreen_splashscreen.md.html#Splashscreen) Spec, you may need to add following statement into the onCreate method of the class that extends DroidGap:
 

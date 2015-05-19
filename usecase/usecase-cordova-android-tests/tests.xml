@@ -23,6 +23,8 @@
       </testcase>
       <testcase component="Crosswalk Use Cases/Cordova" execution_type="manual" id="WebAppSwitch" purpose="WebAppSwitch Test">
       </testcase>
+      <testcase component="Crosswalk Use Cases/Cordova" execution_type="manual" id="AdMob" purpose="AdMob Test">
+      </testcase>
       <testcase component="Crosswalk Use Cases/Cordova" execution_type="manual" id="AppContainer" purpose="AppContainer Test">
       </testcase>
       <testcase component="Crosswalk Use Cases/Cordova" execution_type="manual" id="SharedModeLibraryDownload" purpose="SharedModeLibraryDownload Test">
